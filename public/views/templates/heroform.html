@@ -1,0 +1,39 @@
+<h1> Add a new Hero </h1>
+
+<!-- <div ng-app="myApp"> -->
+  <h1>Hero Form</h1>
+
+  <div id="entryForm">
+    <form id="heroForm" ng-submit="heroform.addHero()">
+      <label for="persona">Persona: </label>
+      <input type="text" id="persona" name="persona" ng-model="heroform.newHero.persona"/>
+
+      <label for="alias">Alias:  </label>
+      <input type="text" id="alias" name="alias" ng-model="heroform.newHero.alias"/>
+
+      <select ng-model="heroArray" ng-options="power_id.heroArray for power_id in heros">
+      </select>
+
+
+      <input type="submit" value="Submit Hero" />
+    </form>
+  </div>
+
+  <table class='table table-bordered'>
+    <thead class='thead-default'>
+        <tr>
+      <td> Persona </td>
+      <td> Alias </td>
+      <td> Power Id </td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="hero in heroform.heroArray">
+        <td ng-model="hero.persona"> {{hero.persona}} </td>
+        <td ng-model="hero.alias"> {{hero.alias}} </td>
+        <td ng-model="hero.power_id"> {{hero.power_id}} </td>
+    </tr>
+  </tbody>
+
+
+</div>

@@ -5,7 +5,7 @@ var pg = require('pg');
 var bodyParser = require('body-parser');
 
 var pool = new pg.Pool({
-  database: config.database
+  database: 'sigma'
 });
 
 router.use(bodyParser.json());
